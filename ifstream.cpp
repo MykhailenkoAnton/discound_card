@@ -14,6 +14,14 @@ int main()
     else
     {
         cout << "file is open" << endl;
+        string symbol;
+        while (!fin.eof())
+        {
+            symbol = "";
+            getline(fin, symbol);
+            cout << symbol << endl;
+        }
+
     }
     fin.close();
 

@@ -22,6 +22,6 @@ int main()
         fout << "\n" << number;
     }
     fout.close();
-
+    
     return 0;
 }
