@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-    const string wave = "C:\\Users\\mykha\\Documents\\base.txt";
+    const string wave = "base.txt";
 
     ofstream fout;
 
@@ -22,6 +22,26 @@ int main()
         fout << "\n" << number;
     }
     fout.close();
+
+    ifstream fin;
+    fin.open(wave);
+    if (!fin.is_open())
+    {
+        cout << "Error open file" << endl;
+    }
+    else
+    {
+        cout << "file is open" << endl;
+        string symbol;
+        while (!fin.eof())
+        {
+            symbol = "";
+            getline(fin, symbol);
+            cout << symbol << endl;
+        }
+
+    }
+    fin.close();
     
     return 0;
 }
